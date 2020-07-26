@@ -1,48 +1,6 @@
-import Foundation
+///https://leetcode.com/problems/valid-parentheses/
 
-//class Solution {
-//    func isValid(_ s: String) -> Bool {
-//        guard s.count % 2 == 0 else {
-//            return false
-//        }
-//
-//        if s.isEmpty {
-//            return true
-//        }
-//
-//        let first = s.first!
-//        let opposit = getOpposit(first)
-//
-//        var firstPart = ""
-//        var second: String.Index?
-//        repeat {
-//            second = s.firstIndex(of:opposit)
-//            guard second == nil else {
-//                return false
-//            }
-//            firstPart = String(s[s.index(s.startIndex, offsetBy: 1)..<second!])
-//        } while (firstPart.contains(first))
-//
-//        let secondPlus = s.index(second!, offsetBy: 1)
-//        let secondPart = String(s[secondPlus...])
-//
-//        return isValid(firstPart) && isValid(secondPart)
-//    }
-//
-//    func getOpposit(_ character: Character) -> Character {
-//        switch (character) {
-//            case "(": return ")"
-//            case ")":  return "("
-//            case "{": return "}"
-//            case "}": return "{"
-//            case "[": return "]"
-//            case "]": return "["
-//            default : fatalError("Shouldn't happend")
-//        }
-//    }
-//}
-
-class Solution {
+final class Solution {
 //    let pairs: [Character: Character] = ["{":"}","(":")","[":"]"]
 //    let keys: Int { return pairs.keys }
     

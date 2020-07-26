@@ -1,3 +1,5 @@
+///https://leetcode.com/problems/merge-intervals/
+
 struct Solution {
     func merge(_ intervals: [[Int]]) -> [[Int]] {
         guard intervals.count > 1 else {
